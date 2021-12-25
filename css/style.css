@@ -1,0 +1,129 @@
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-medium: hsla(178, 100%, 50%, 0.5);
+    --body-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --card-line: hsl(215, 32%, 27%);
+    --font-size-p: 18px;
+    --font-family: 'Outfit', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg);
+    min-height: 100vh;
+    font-family: var(--font-family);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 2em;
+    border-radius: 12px;
+    background-color: var(--card-bg);
+}
+
+.card__img{
+    position: relative;
+    margin: 0;
+    width: 260px;
+    border-radius: 12px;
+}
+
+.img{
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+.card__img:hover>.card__view{
+    opacity: 1;
+}
+
+.card__view{
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan-medium);
+}
+
+.img--small{
+    width: 14%;
+    height: 14%;
+}
+
+.card__title{
+    color: white;
+    font-weight: 600;
+}
+
+.card__texts{
+    border-bottom: 1px solid var(--card-line);
+}
+
+.card__compare{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__stast{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.text{
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+
+.text--eth{
+    font-size: 1.1rem;
+    color: #00FFF8;
+}
+
+.card__footer{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: 400;
+}
+
+.card__footer__avatar{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.autor{
+    color: white;
+}
+
+.card__title:hover,
+.autor:hover{
+    color: var(--cyan);
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
